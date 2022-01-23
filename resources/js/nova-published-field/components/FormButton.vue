@@ -1,5 +1,5 @@
 <template>
-      <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton" v-if="!field.value" />
+      <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />
 </template>
 
 <script>
@@ -20,25 +20,6 @@ export default {
   },
 
   mounted() {
-    const formHeading = this.getFormHeading();
-    const publishButton = this.$refs.publishButton;
-
-    if (formHeading && publishButton) {
-      formHeading.style.display = 'flex';
-      formHeading.style['align-items'] = 'center';
-      formHeading.append(publishButton);
-    }
   },
 };
 </script>
-
-
-<style>
-form h1 > *:first-child {
-  margin-left: auto;
-}
-
-form h1 > *:last-child {
-  margin-right: 0;
-}
-</style>

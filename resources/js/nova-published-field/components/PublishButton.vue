@@ -20,7 +20,6 @@ export default {
 
         this.$toasted.show(this.__('novaDrafts.publishSuccessToast'), { type: 'success' });
       } catch (e) {
-        console.error(e);
         this.$toasted.show(this.__('novaDrafts.publishFailedToast'), { type: 'error' });
       }
     },
