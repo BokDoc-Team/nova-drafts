@@ -309,11 +309,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -28483,21 +28478,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "ml-3 flex items-center details-actions-container" },
-      [
-        !_vm.field.value
-          ? _c("publish-button", {
-              ref: "publishButton",
-              attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-            })
-          : _vm._e()
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    [
+      !_vm.field.value
+        ? _c("publish-button", {
+            ref: "publishButton",
+            attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
