@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="ml-3 flex items-center details-actions-container">
-      <publish-button  :resourceClass="field.class" ref="publishButton" v-if="!field.value" />
+      <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton" v-if="!field.value" />
     </div>
   </div>
 </template>
@@ -16,7 +16,6 @@ export default {
   components: {PublishButton},
   data() {
     return {
-      draft: void 0,
       draftId: this.resourceId,
     };
   },

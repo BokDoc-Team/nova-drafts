@@ -321,7 +321,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      draft: void 0,
       draftId: this.resourceId
     };
   },
@@ -28488,7 +28487,7 @@ var render = function() {
         !_vm.field.value
           ? _c("publish-button", {
               ref: "publishButton",
-              attrs: { resourceClass: _vm.field.class }
+              attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
             })
           : _vm._e()
       ],
