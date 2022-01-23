@@ -328,6 +328,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -28559,7 +28560,8 @@ var render = function() {
             attrs: {
               type: "button",
               className: "ml-3 btn btn-default btn-primary",
-              id: "create-draft-button"
+              id: "create-draft-button",
+              resourceClass: _vm.field.class
             },
             on: { click: _vm.publish }
           },
