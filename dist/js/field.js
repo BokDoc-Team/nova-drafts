@@ -310,6 +310,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -324,7 +325,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {},
-  mounted: function mounted() {}
+  computed: {
+    isDraft: function isDraft() {
+      return this.field.isDraft;
+    }
+  }
 });
 
 /***/ }),
@@ -582,7 +587,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.button_publish[data-v-724e9b90]{\n  margin-left: auto;\n  margin-right: 0;\n}\n", ""]);
+exports.push([module.i, "\n.button_publish[data-v-724e9b90]{\n  float: left;\n}\n", ""]);
 
 // exports
 
@@ -28523,18 +28528,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "button",
-    {
-      ref: "publishButton",
-      staticClass: "ml-3 btn btn-default btn-primary text-base",
-      attrs: { type: "button" },
-      on: { click: _vm.publish }
-    },
+    "div",
     [
-      _vm._v(
-        "\n      " + _vm._s(_vm.__("novaDrafts.publishButtonText")) + "\n    "
-      )
-    ]
+      _c("publish-indicator", {
+        attrs: { draft: _vm.isDraft, published: _vm.field.value }
+      }),
+      _vm._v(" "),
+      !_vm.field.value
+        ? _c("publish-button", {
+            staticClass: "button_publish",
+            attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
+          })
+        : _vm._e()
+    ],
+    1
   )
 }
 var staticRenderFns = []

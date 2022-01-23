@@ -1,8 +1,8 @@
 <template>
-<!--      <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />-->
-    <button class="ml-3 btn btn-default btn-primary text-base" ref="publishButton" type="button" v-on:click="publish">
-      {{ __('novaDrafts.publishButtonText') }}
-    </button>
+  <div>
+  <publish-indicator :draft="isDraft" :published="field.value" />
+  <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />
+  </div>
 </template>
 
 <script>
@@ -22,15 +22,16 @@ export default {
   methods: {
   },
 
-  mounted() {
-
+  computed: {
+    isDraft() {
+      return this.field.isDraft;
+    },
   },
 };
 </script>
 
 <style scoped>
 .button_publish{
-  margin-left: auto;
-  margin-right: 0;
+  float: left;
 }
 </style>
