@@ -309,17 +309,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_0__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_0__["HandlesValidationErrors"]],
@@ -28518,49 +28507,9 @@ var render = function() {
   return _c(
     "div",
     [
-      !_vm.field.isDraft
-        ? _c(
-            "button",
-            {
-              ref: "createNovaDraftButton",
-              staticClass: "ml-3 btn btn-default btn-primary",
-              attrs: { type: "button", id: "create-draft-button" },
-              on: { click: _vm.createDraft }
-            },
-            [
-              _vm._v(
-                "\n    " +
-                  _vm._s(_vm.__("novaDrafts.createDraftButtonText")) +
-                  "\n  "
-              )
-            ]
-          )
-        : _vm._e(),
-      _vm._v(" "),
       _c("publish-button", {
         ref: "publishButton",
         attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.draft,
-            expression: "draft"
-          }
-        ],
-        attrs: { name: "draft", type: "hidden" },
-        domProps: { value: _vm.draft },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.draft = $event.target.value
-          }
-        }
       })
     ],
     1

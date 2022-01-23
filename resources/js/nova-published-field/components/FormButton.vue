@@ -1,18 +1,7 @@
 <template>
   <div>
-    <button
-      ref="createNovaDraftButton"
-      type="button"
-      class="ml-3 btn btn-default btn-primary"
-      id="create-draft-button"
-      v-on:click="createDraft"
-      v-if="!field.isDraft"
-    >
-      {{ __('novaDrafts.createDraftButtonText') }}
-    </button>
-
     <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton"/>
-    <input name="draft" v-model="draft" type="hidden" />
+
   </div>
 </template>
 
