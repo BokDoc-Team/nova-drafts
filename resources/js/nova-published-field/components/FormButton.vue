@@ -8,11 +8,12 @@
 <script>
 import {FormField, HandlesValidationErrors} from 'laravel-nova';
 import PublishButton from './PublishButton';
+import PublishIndicator from './PublishIndicator';
 
 export default {
   mixins: [FormField, HandlesValidationErrors],
   props: ['resource', 'resourceId', 'field'],
-  components: {PublishButton},
+  components: {PublishButton, PublishIndicator},
   data() {
     return {
       draftId: this.resourceId,
