@@ -4,11 +4,11 @@
 
 <script>
 import {FormField, HandlesValidationErrors} from 'laravel-nova';
-import PublishButton from './PublishButton';
+import PublishButton from './components/PublishButton.vue';
 
 export default {
   mixins: [FormField, HandlesValidationErrors],
-  props: ['resource', 'resourceId', 'field'],
+  props: ['resource', 'resourceId', 'field', 'resourceName'],
   components: {PublishButton},
   data() {
     return {
@@ -21,12 +21,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
-.resource-form .form-errors .card {
-  margin-bottom: 66px !important;
-}
-.button_publish{
-  float: right;
-}
 </style>
