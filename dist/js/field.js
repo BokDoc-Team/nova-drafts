@@ -329,6 +329,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -353,14 +355,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log(_this.field);
-                _context.prev = 1;
-                _context.next = 4;
+                _context.prev = 0;
+                _context.next = 3;
                 return Nova.request().post("/nova-vendor/nova-drafts/draft-publish/".concat(_this.draftId), {
                   "class": _this.resourceClass
                 });
 
-              case 4:
+              case 3:
                 response = _context.sent;
 
                 if (_this.draftId === response.data.id) {
@@ -373,24 +374,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   type: 'success'
                 });
 
-                _context.next = 13;
+                _context.next = 12;
                 break;
 
-              case 9:
-                _context.prev = 9;
-                _context.t0 = _context["catch"](1);
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
                 console.error(_context.t0);
 
                 _this.$toasted.show(_this.__('novaDrafts.publishFailedToast'), {
                   type: 'error'
                 });
 
-              case 13:
+              case 12:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 9]]);
+        }, _callee, null, [[0, 8]]);
       }))();
     }
   },
@@ -28553,26 +28554,34 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    !_vm.field.isDraft
-      ? _c(
-          "button",
-          {
-            ref: "createNovaDraftButton",
-            staticClass: "ml-3 btn btn-default btn-primary",
-            attrs: {
-              type: "button",
-              id: "create-draft-button",
-              resourceClass: _vm.field.class
-            },
-            on: { click: _vm.publish }
-          },
-          [
-            _vm._v(
-              "\n    " + _vm._s(_vm.__("novaDrafts.publishButtonText")) + "\n  "
+    _c(
+      "div",
+      { staticClass: "ml-3 flex items-center details-actions-container" },
+      [
+        !_vm.field.isDraft
+          ? _c(
+              "button",
+              {
+                ref: "createNovaDraftButton",
+                staticClass: "ml-3 btn btn-default btn-primary",
+                attrs: {
+                  type: "button",
+                  id: "create-draft-button",
+                  resourceClass: _vm.field.class
+                },
+                on: { click: _vm.publish }
+              },
+              [
+                _vm._v(
+                  "\n    " +
+                    _vm._s(_vm.__("novaDrafts.publishButtonText")) +
+                    "\n  "
+                )
+              ]
             )
-          ]
-        )
-      : _vm._e()
+          : _vm._e()
+      ]
+    )
   ])
 }
 var staticRenderFns = []

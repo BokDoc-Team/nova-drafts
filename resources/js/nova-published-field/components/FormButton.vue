@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="ml-3 flex items-center details-actions-container">
     <button
       ref="createNovaDraftButton"
       type="button"
@@ -11,6 +12,7 @@
     >
       {{ __('novaDrafts.publishButtonText') }}
     </button>
+    </div>
 
   </div>
 
@@ -33,7 +35,6 @@ export default {
 
   methods: {
     async publish() {
-      console.log(this.field);
       try {
         const response = await Nova.request().post(`/nova-vendor/nova-drafts/draft-publish/${this.draftId}`, {
           class: this.resourceClass,
