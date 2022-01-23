@@ -578,7 +578,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.button_publish[data-v-724e9b90]{\n  float: left;\n}\n", ""]);
+exports.push([module.i, "\n.resource-form .form-errors .card[data-v-724e9b90] {\n  margin-bottom: 66px;\n}\n.button_publish[data-v-724e9b90]{\n  float: right;\n}\n", ""]);
 
 // exports
 

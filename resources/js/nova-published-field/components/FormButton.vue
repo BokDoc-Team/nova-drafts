@@ -22,7 +22,11 @@ export default {
 </script>
 
 <style scoped>
+
+.resource-form .form-errors .card {
+  margin-bottom: 66px;
+}
 .button_publish{
-  float: left;
+  float: right;
 }
 </style>
