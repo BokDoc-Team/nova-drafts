@@ -3,6 +3,7 @@
 namespace OptimistDigital\NovaDrafts;
 
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\FieldElement;
 use OptimistDigital\NovaDrafts\Models\Draft;
 
 class PublishedField extends Field
@@ -43,9 +44,25 @@ class PublishedField extends Field
             $this->hideFromDetail();
             $this->hideFromIndex();
         } else {
-            $this->exceptOnForms();
+            $this->exceptOnFormsData();
         }
     }
+
+    /**
+     * Specify that the element should be hidden from forms.
+     *
+     * @return $this
+     */
+    public function exceptOnFormsData()
+    {
+        $this->showOnIndex = true;
+        $this->showOnDetail = true;
+        $this->showOnCreation = false;
+        $this->showOnUpdate = true;
+
+        return $this;
+    }
+
 
     public function resolve($resource, $attribute = null)
     {

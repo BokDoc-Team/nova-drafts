@@ -11,6 +11,7 @@
       {{ __('novaDrafts.createDraftButtonText') }}
     </button>
 
+    <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton"/>
     <input name="draft" v-model="draft" type="hidden" />
   </div>
 </template>
@@ -26,6 +27,7 @@ export default {
     return {
       draft: void 0,
       postId: this.resourceId,
+      draftId: this.resource.id.value,
     };
   },
 
