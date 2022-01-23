@@ -39,6 +39,7 @@ class DraftButton extends Field
             $this->hideWhenCreating();
         }
         $this->hideFromIndex();
+        $this->hideWhenUpdating();
     }
 
     public function resolve($resource, $attribute = null)
