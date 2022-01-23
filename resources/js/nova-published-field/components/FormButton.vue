@@ -1,6 +1,16 @@
 <template>
   <div>
-    <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton"/>
+    <button
+      ref="createNovaDraftButton"
+      type="button"
+      className="ml-3 btn btn-default btn-primary"
+      id="create-draft-button"
+      v-on:click="publish"
+      v-if="!field.isDraft"
+    >
+      {{ __('novaDrafts.publishButtonText') }}
+    </button>
+
   </div>
 
 </template>
@@ -20,8 +30,32 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    async publish() {
+      console.log(this.resource)
+      try {
+        const response = await Nova.request().post(`/nova-vendor/nova-drafts/draft-publish/${this.draftId}`, {
+          class: this.resourceClass,
+        });
 
-  computed: {},
+        if (this.draftId === response.data.id) {
+          this.$router.go(null);
+        } else {
+          this.$router.push(`${response.data.id}`);
+        }
+
+        this.$toasted.show(this.__('novaDrafts.publishSuccessToast'), {type: 'success'});
+      } catch (e) {
+        console.error(e);
+        this.$toasted.show(this.__('novaDrafts.publishFailedToast'), {type: 'error'});
+      }
+    },
+  },
+
+  computed: {
+    isDraft() {
+      return !this.field.value || (this.field.value && (this.field.childDraft || this.field.draftParent));
+    },
+  },
 };
 </script>
