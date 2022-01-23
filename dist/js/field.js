@@ -307,6 +307,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -28519,12 +28522,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return !_vm.field.value
-    ? _c("publish-button", {
-        staticClass: "button_publish",
-        attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-      })
-    : _vm._e()
+  return _c(
+    "button",
+    {
+      ref: "publishButton",
+      staticClass: "ml-3 btn btn-default btn-primary text-base",
+      attrs: { type: "button" },
+      on: { click: _vm.publish }
+    },
+    [
+      _vm._v(
+        "\n      " + _vm._s(_vm.__("novaDrafts.publishButtonText")) + "\n    "
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

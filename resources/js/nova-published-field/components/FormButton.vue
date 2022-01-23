@@ -1,5 +1,8 @@
 <template>
-      <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />
+<!--      <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />-->
+    <button class="ml-3 btn btn-default btn-primary text-base" ref="publishButton" type="button" v-on:click="publish">
+      {{ __('novaDrafts.publishButtonText') }}
+    </button>
 </template>
 
 <script>
@@ -20,6 +23,7 @@ export default {
   },
 
   mounted() {
+
   },
 };
 </script>
