@@ -23,3 +23,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.button_publish{
+  margin-left: auto;
+  margin-right: 0;
+}
+</style>
