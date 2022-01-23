@@ -303,15 +303,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-nova */ "./node_modules/laravel-nova/dist/index.js");
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(laravel_nova__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _PublishButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PublishButton */ "./resources/js/nova-published-field/components/PublishButton.vue");
-/* harmony import */ var _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PublishIndicator */ "./resources/js/nova-published-field/components/PublishIndicator.vue");
 //
 //
 //
 //
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -319,19 +314,14 @@ __webpack_require__.r(__webpack_exports__);
   props: ['resource', 'resourceId', 'field'],
   components: {
     PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"],
-    PublishIndicator: _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__["default"]
+    PublishIndicator: PublishIndicator
   },
   data: function data() {
     return {
       draftId: this.resourceId
     };
   },
-  methods: {},
-  computed: {
-    isDraft: function isDraft() {
-      return this.field.isDraft;
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -28529,22 +28519,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("publish-indicator", {
-        attrs: { draft: _vm.isDraft, published: _vm.field.value }
-      }),
-      _vm._v(" "),
-      !_vm.field.value
-        ? _c("publish-button", {
-            staticClass: "button_publish",
-            attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-          })
-        : _vm._e()
-    ],
-    1
-  )
+  return !_vm.field.value
+    ? _c("publish-button", {
+        staticClass: "button_publish",
+        attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
+      })
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
