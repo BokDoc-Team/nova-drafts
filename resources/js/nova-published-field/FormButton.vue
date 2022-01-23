@@ -1,41 +1,32 @@
 <template>
-  <button class="ml-3 btn btn-default btn-primary text-base" ref="publishButton" type="button" v-on:click="publish">
-    {{ __('novaDrafts.publishButtonText') }}
-  </button>
+  <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />
 </template>
 
 <script>
 import {FormField, HandlesValidationErrors} from 'laravel-nova';
+import PublishButton from './components/PublishButton.vue';
 
 export default {
   mixins: [FormField, HandlesValidationErrors],
   props: ['resource', 'resourceId', 'field', 'resourceName'],
+  components: {PublishButton},
   data() {
     return {
       draftId: this.resourceId,
-      resourceClass: this.field.class,
     };
   },
 
   methods: {
-    async publish() {
-      try {
-        const response = await Nova.request().post(`/nova-vendor/nova-drafts/draft-publish/${this.draftId}`, {
-          class: this.resourceClass,
-        });
-
-        this.$router.go(null);
-
-
-        this.$toasted.show(this.__('novaDrafts.publishSuccessToast'), { type: 'success' });
-      } catch (e) {
-        this.$toasted.show(this.__('novaDrafts.publishFailedToast'), { type: 'error' });
-      }
-    },
   },
 };
 </script>
 
 <style scoped>
 
+.resource-form .form-errors .card {
+  margin-bottom: 66px !important;
+}
+.button_publish{
+  float: right;
+}
 </style>
