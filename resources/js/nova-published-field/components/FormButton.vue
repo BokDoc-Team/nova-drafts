@@ -9,7 +9,7 @@ import PublishButton from './PublishButton';
 export default {
   mixins: [FormField, HandlesValidationErrors],
   props: ['resource', 'resourceId', 'field'],
-  components: {PublishButton, PublishIndicator},
+  components: {PublishButton},
   data() {
     return {
       draftId: this.resourceId,

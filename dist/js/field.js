@@ -313,8 +313,7 @@ __webpack_require__.r(__webpack_exports__);
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_0__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_0__["HandlesValidationErrors"]],
   props: ['resource', 'resourceId', 'field'],
   components: {
-    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"],
-    PublishIndicator: PublishIndicator
+    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
