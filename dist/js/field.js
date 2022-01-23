@@ -408,8 +408,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 if (_this.draftId === response.data.id) {
                   _this.$router.go(null);
-                } else {
-                  _this.$router.push("".concat(response.data.id));
                 }
 
                 _this.$toasted.show(_this.__('novaDrafts.publishSuccessToast'), {

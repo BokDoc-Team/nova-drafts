@@ -17,8 +17,6 @@ export default {
 
         if (this.draftId === response.data.id) {
           this.$router.go(null);
-        } else {
-          this.$router.push(`${response.data.id}`);
         }
 
         this.$toasted.show(this.__('novaDrafts.publishSuccessToast'), { type: 'success' });
