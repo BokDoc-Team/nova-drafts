@@ -352,7 +352,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log(_this.resource);
+                console.log(_this.resourceId);
                 _context.prev = 1;
                 _context.next = 4;
                 return Nova.request().post("/nova-vendor/nova-drafts/draft-publish/".concat(_this.draftId), {

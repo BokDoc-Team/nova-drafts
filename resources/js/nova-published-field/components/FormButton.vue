@@ -32,7 +32,7 @@ export default {
 
   methods: {
     async publish() {
-      console.log(this.resource)
+      console.log(this.resourceId)
       try {
         const response = await Nova.request().post(`/nova-vendor/nova-drafts/draft-publish/${this.draftId}`, {
           class: this.resourceClass,
