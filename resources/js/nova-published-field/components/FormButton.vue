@@ -1,17 +1,18 @@
 <template>
   <div>
     <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton"/>
-
   </div>
 </template>
 
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova';
+import PublishButton from './PublishButton';
+import PublishIndicator from './PublishIndicator';
 
 export default {
   mixins: [FormField, HandlesValidationErrors],
   props: ['resource', 'resourceId', 'field'],
-
+  components: { PublishButton, PublishIndicator },
   data() {
     return {
       draft: void 0,
