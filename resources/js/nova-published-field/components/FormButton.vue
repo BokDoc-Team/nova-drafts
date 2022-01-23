@@ -19,8 +19,26 @@ export default {
   methods: {
   },
 
-  computed: {
+  mounted() {
+    const formHeading = this.getFormHeading();
+    const publishButton = this.$refs.publishButton;
 
+    if (formHeading && publishButton) {
+      formHeading.style.display = 'flex';
+      formHeading.style['align-items'] = 'center';
+      formHeading.append(publishButton);
+    }
   },
 };
 </script>
+
+
+<style>
+form h1 > *:first-child {
+  margin-left: auto;
+}
+
+form h1 > *:last-child {
+  margin-right: 0;
+}
+</style>

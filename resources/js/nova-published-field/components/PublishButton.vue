@@ -1,5 +1,5 @@
 <template>
-  <button class="ml-3 btn btn-default btn-primary text-base" type="button" v-on:click="publish">
+  <button class="ml-3 btn btn-default btn-primary text-base" ref="publishButton" type="button" v-on:click="publish">
     {{ __('novaDrafts.publishButtonText') }}
   </button>
 </template>
