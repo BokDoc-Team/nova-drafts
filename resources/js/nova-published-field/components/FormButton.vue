@@ -26,13 +26,12 @@ export default {
   data() {
     return {
       draft: void 0,
-      draftId: this.resource.id.value,
+      draftId: this.resourceId,
     };
   },
 
   methods: {
     async publish() {
-      console.log(this.resourceId)
       try {
         const response = await Nova.request().post(`/nova-vendor/nova-drafts/draft-publish/${this.draftId}`, {
           class: this.resourceClass,
