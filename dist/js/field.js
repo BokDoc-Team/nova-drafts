@@ -268,14 +268,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_1__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_1__["HandlesValidationErrors"]],
   props: ['resource', 'resourceId', 'field', 'resourceName'],
   data: function data() {
     return {
-      draftId: this.resourceId
+      draftId: this.resourceId,
+      resourceClass: this.field["class"]
     };
   },
   methods: {
@@ -28477,10 +28477,10 @@ var render = function() {
     {
       ref: "publishButton",
       staticClass: "ml-3 btn btn-default btn-primary text-base",
-      attrs: { resourceClass: _vm.field.class, type: "button" },
+      attrs: { type: "button" },
       on: { click: _vm.publish }
     },
-    [_vm._v("\n    " + _vm._s(_vm.__("novaDrafts.publishButtonText")) + "\n  ")]
+    [_vm._v("\n  " + _vm._s(_vm.__("novaDrafts.publishButtonText")) + "\n")]
   )
 }
 var staticRenderFns = []

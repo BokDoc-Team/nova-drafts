@@ -1,6 +1,5 @@
 <template>
-<!--  <publish-button :draftId="draftId" :resourceClass="field.class"  v-if="!field.value" class="button_publish" />-->
-  <button class="ml-3 btn btn-default btn-primary text-base" :resourceClass="field.class" ref="publishButton" type="button" v-on:click="publish">
+  <button class="ml-3 btn btn-default btn-primary text-base" ref="publishButton" type="button" v-on:click="publish">
     {{ __('novaDrafts.publishButtonText') }}
   </button>
 </template>
@@ -14,6 +13,7 @@ export default {
   data() {
     return {
       draftId: this.resourceId,
+      resourceClass: this.field.class,
     };
   },
 
