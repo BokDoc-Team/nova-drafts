@@ -1,5 +1,5 @@
 <template>
-  <button class="ml-3 btn btn-default btn-primary" type="button" v-on:click="publish">
+  <button class="ml-3 btn btn-default btn-primary text-base" type="button" v-on:click="publish">
     {{ __('novaDrafts.publishButtonText') }}
   </button>
 </template>
@@ -15,9 +15,8 @@ export default {
           class: this.resourceClass,
         });
 
-        if (this.draftId === response.data.id) {
           this.$router.go(null);
-        }
+
 
         this.$toasted.show(this.__('novaDrafts.publishSuccessToast'), { type: 'success' });
       } catch (e) {
