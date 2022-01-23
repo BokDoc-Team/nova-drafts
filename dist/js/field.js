@@ -303,6 +303,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-nova */ "./node_modules/laravel-nova/dist/index.js");
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(laravel_nova__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _PublishButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PublishButton */ "./resources/js/nova-published-field/components/PublishButton.vue");
+/* harmony import */ var _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PublishIndicator */ "./resources/js/nova-published-field/components/PublishIndicator.vue");
 //
 //
 //
@@ -310,14 +311,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_0__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_0__["HandlesValidationErrors"]],
   props: ['resource', 'resourceId', 'field'],
   components: {
-    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"]
+    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PublishIndicator: _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
