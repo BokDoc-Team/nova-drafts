@@ -303,61 +303,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-nova */ "./node_modules/laravel-nova/dist/index.js");
 /* harmony import */ var laravel_nova__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(laravel_nova__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _PublishButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PublishButton */ "./resources/js/nova-published-field/components/PublishButton.vue");
-/* harmony import */ var _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PublishIndicator */ "./resources/js/nova-published-field/components/PublishIndicator.vue");
 //
 //
 //
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_0__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_0__["HandlesValidationErrors"]],
   props: ['resource', 'resourceId', 'field'],
   components: {
-    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"],
-    PublishIndicator: _PublishIndicator__WEBPACK_IMPORTED_MODULE_2__["default"]
+    PublishButton: _PublishButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
       draft: void 0,
-      postId: this.resourceId,
       draftId: this.resource.id.value
     };
   },
-  mounted: function mounted() {
-    if (!this.field.isDraft) {
-      var positionDraftButton = this.actionButton.parentNode.querySelector('[id=create-draft-button]');
-
-      if (positionDraftButton && positionDraftButton !== this.$refs.createNovaDraftButton) {
-        this.actionButton.parentNode.removeChild(positionDraftButton);
-      }
-
-      this.actionButton.parentNode.append(this.$refs.createNovaDraftButton);
-    }
-  },
-  methods: {
-    fill: function fill(formData) {
-      if (this.draft) {
-        formData.append(this.field.attribute, this.draft);
-      }
-    },
-    createDraft: function createDraft() {
-      var _this = this;
-
-      this.draft = true;
-      this.$nextTick(function () {
-        _this.actionButton.click();
-      });
-    }
-  },
-  computed: {
-    actionButton: function actionButton() {
-      return document.querySelector('.content').querySelector("[dusk=\"".concat(!!this.resourceId ? 'update-button' : 'create-button', "\"]"));
-    }
-  }
+  methods: {},
+  computed: {}
 });
 
 /***/ }),
