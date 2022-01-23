@@ -310,14 +310,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -28493,19 +28485,7 @@ var render = function() {
       _c("publish-button", {
         ref: "publishButton",
         attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          ref: "unpublishButton",
-          attrs: {
-            type: "button",
-            className: "mr-3 btn btn-default btn-danger text-base"
-          }
-        },
-        [_vm._v("\n    " + _vm._s(this.field.name) + "\n  ")]
-      )
+      })
     ],
     1
   )

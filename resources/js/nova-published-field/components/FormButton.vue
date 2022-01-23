@@ -1,14 +1,6 @@
 <template>
   <div>
     <publish-button :draftId="draftId" :resourceClass="field.class" ref="publishButton"/>
-
-    <button
-      ref="unpublishButton"
-      type="button"
-      className="mr-3 btn btn-default btn-danger text-base"
-    >
-      {{ this.field.name }}
-    </button>
   </div>
 
 </template>
