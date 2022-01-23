@@ -309,6 +309,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -28484,7 +28493,19 @@ var render = function() {
       _c("publish-button", {
         ref: "publishButton",
         attrs: { draftId: _vm.draftId, resourceClass: _vm.field.class }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          ref: "unpublishButton",
+          attrs: {
+            type: "button",
+            className: "mr-3 btn btn-default btn-danger text-base"
+          }
+        },
+        [_vm._v("\n    " + _vm._s(this.field.name) + "\n  ")]
+      )
     ],
     1
   )
@@ -28804,7 +28825,7 @@ Nova.booting(function (Vue, router, store) {
   Vue.component('form-nova-draft-button', _nova_draft_button_components_FormButton__WEBPACK_IMPORTED_MODULE_1__["default"]);
   Vue.component('index-nova-published-field', _nova_published_field_components_IndexField__WEBPACK_IMPORTED_MODULE_2__["default"]);
   Vue.component('detail-nova-published-field', _nova_published_field_components_DetailButton__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  Vue.component('form-nova-published-button', _nova_published_field_components_FormButton__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  Vue.component('form-nova-published-field', _nova_published_field_components_FormButton__WEBPACK_IMPORTED_MODULE_3__["default"]);
   Vue.component('detail-nova-unpublish-button', _nova_unpublish_button_Detail__WEBPACK_IMPORTED_MODULE_5__["default"]);
   Vue.component('form-nova-unpublish-button', _nova_unpublish_button_Form__WEBPACK_IMPORTED_MODULE_6__["default"]);
 });

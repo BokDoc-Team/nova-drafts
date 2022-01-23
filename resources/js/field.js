@@ -12,9 +12,9 @@ Nova.booting((Vue, router, store) => {
 
   Vue.component('index-nova-published-field', IndexNovaPublishedField);
   Vue.component('detail-nova-published-field', DetailNovaPublishedField);
-  Vue.component('form-nova-published-button', FormNovaPublishedField);
+  Vue.component('form-nova-published-field', FormNovaPublishedField);
 
 
-    Vue.component('detail-nova-unpublish-button', DetailNovaUnpublishButton);
+  Vue.component('detail-nova-unpublish-button', DetailNovaUnpublishButton);
   Vue.component('form-nova-unpublish-button', FormNovaUnpublishButton);
 });
