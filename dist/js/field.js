@@ -28558,9 +28558,9 @@ var render = function() {
           "button",
           {
             ref: "createNovaDraftButton",
+            staticClass: "ml-3 btn btn-default btn-primary",
             attrs: {
               type: "button",
-              className: "ml-3 btn btn-default btn-primary",
               id: "create-draft-button",
               resourceClass: _vm.field.class
             },

@@ -3,7 +3,7 @@
     <button
       ref="createNovaDraftButton"
       type="button"
-      className="ml-3 btn btn-default btn-primary"
+      class="ml-3 btn btn-default btn-primary"
       id="create-draft-button"
       v-on:click="publish"
       :resourceClass="field.class"
